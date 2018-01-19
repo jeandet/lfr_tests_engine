@@ -38,7 +38,12 @@ setup(
     author="Alexis Jeandet",
     author_email='alexis.jeandet@member.fsf.org',
     url='https://github.com/jeandet/lfr_tests_engine',
-    packages=find_packages(include=['lfr_tests_engine']),
+    packages=find_packages(include=[
+        'lfr_tests_engine',
+        'lfr_tests_engine.common',
+        'lfr_tests_engine.engine',
+        'lfr_tests_engine.tcpackets'
+    ]),
     entry_points={
         'console_scripts': [
             'lfr_tests_engine=lfr_tests_engine.cli:main'
